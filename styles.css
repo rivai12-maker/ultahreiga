@@ -19,8 +19,8 @@ body {
 /* Container */
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center the content horizontally */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -29,7 +29,9 @@ body {
 /* Photo Slot */
 .photo-left, .photo-right {
     flex: 1;
+    max-width: 100%;
     text-align: center;
+    padding: 10px;
 }
 
 .photo-left img, .photo-right img {
@@ -164,3 +166,8 @@ body {
 .popup button:focus {
     outline: none;
 }
+
+/* Media Query for devices with width less than 600px */
+@media (max-width: 600px) {
+    .header h1 {
+        f
